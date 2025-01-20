@@ -12,7 +12,7 @@
     <artifactId>CadastroNinjas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>CadastroNinjas</name>
-    <description>CadastroNinjas</description>
+    <description>API para Cadastro de Ninjas</description>
     <url/>
     <licenses>
         <license/>
