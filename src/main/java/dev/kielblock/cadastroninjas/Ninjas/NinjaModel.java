@@ -1,5 +1,6 @@
-package dev.kielblock.cadastroninjas.models;
+package dev.kielblock.cadastroninjas.Ninjas;
 
+import dev.kielblock.cadastroninjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,4 +19,9 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    //MUITOS Ninjas vao ter UMA missao
+    @ManyToOne
+    @JoinColumn(name = "missoes_id")
+    private MissoesModel missao;
 }

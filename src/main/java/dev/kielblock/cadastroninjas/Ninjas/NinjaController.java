@@ -1,4 +1,4 @@
-package dev.kielblock.cadastroninjas.controllers;
+package dev.kielblock.cadastroninjas.Ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
