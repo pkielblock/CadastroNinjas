@@ -27,4 +27,5 @@ public class MissoesModel {
     //UM ninja vai ter MUITAS missoes
     @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninjas;
+
 }
