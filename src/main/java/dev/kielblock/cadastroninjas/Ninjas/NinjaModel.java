@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_ninjas")
+@Table(name = "tb_cadastro")
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -20,10 +20,14 @@ public class NinjaModel {
 
     @Column(unique = true)
     private String email;
+
+    @Column(name = "img_url")
+    private String imgUrl;
+
     private int idade;
 
     //MUITOS Ninjas vao ter UMA missao
     @ManyToOne
     @JoinColumn(name = "missoes_id")
-    private MissoesModel missao;
+    private MissoesModel missoes;
 }
