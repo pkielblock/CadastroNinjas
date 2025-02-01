@@ -1,5 +1,6 @@
 package dev.kielblock.cadastroninjas.Missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.kielblock.cadastroninjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class MissoesModel {
 
     //UM ninja vai ter MUITAS missoes
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore
     private List<NinjaModel> ninjas;
 
 }

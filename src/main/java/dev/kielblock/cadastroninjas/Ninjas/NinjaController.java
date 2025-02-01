@@ -2,18 +2,26 @@ package dev.kielblock.cadastroninjas.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("ninjas")
 public class NinjaController {
+
+    private final NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
 
     @PostMapping("/criar")
     public String criarNinja() {
         return "Ninja Criado";
     }
 
-    @GetMapping("/todos")
-    public String mostrarTodosNinjas() {
-        return "Mostrar todos Ninjas";
+    @GetMapping("/listar")
+    public List<NinjaModel> listarNinjas() {
+        return ninjaService.listarNinjas();
     }
 
     @GetMapping("/{id}")
