@@ -14,8 +14,8 @@ import java.util.UUID;
 @Table(name = "tb_cadastro")
 public class NinjaModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private String nome;
 
     @Column(unique = true)

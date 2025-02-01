@@ -19,10 +19,10 @@ import java.util.UUID;
 public class MissoesModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private String nome;
-    private DificuldadeMissao dificuldade;
+    private String dificuldade;
 
     //UM ninja vai ter MUITAS missoes
     @OneToMany(mappedBy = "missoes")
