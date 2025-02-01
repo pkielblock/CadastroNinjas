@@ -20,8 +20,8 @@ public class MissoesController {
         return "Missão Criada";
     }
 
-    @PutMapping("/alterar/{id}")
-    public String alterarMissaoPorID (@PathVariable long id) {
+    @PutMapping("/atualizar")
+    public String atualizarMissao (@PathVariable long id) {
         return "Missão Alterada";
     }
 
