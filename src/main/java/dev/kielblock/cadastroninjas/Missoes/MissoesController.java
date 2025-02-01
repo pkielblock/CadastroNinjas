@@ -10,6 +10,11 @@ public class MissoesController {
         return "Missões Listadas";
     }
 
+    @GetMapping("/listar/{id}")
+    public String listarMissoesPorID(@PathVariable long id) {
+        return "Missões Listadas";
+    }
+
     @PostMapping("/criar")
     public String criarMissao() {
         return "Missão Criada";
