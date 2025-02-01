@@ -3,7 +3,7 @@ package dev.kielblock.cadastroninjas.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("ninjas")
 public class NinjaController {
 
     @PostMapping("/criar")
@@ -16,18 +16,18 @@ public class NinjaController {
         return "Mostrar todos Ninjas";
     }
 
-    @GetMapping("/ninja-{id}")
-    public String mostrarNinjaPorID(long id) {
+    @GetMapping("/{id}")
+    public String mostrarNinjaPorID(@PathVariable long id) {
         return "Mostrar Ninja ID";
     }
 
-    @PutMapping("/editar-{id}")
-    public String alterarNinjaPorID(long id) {
+    @PutMapping("/editar/{id}")
+    public String alterarNinjaPorID(@PathVariable long id) {
         return "Ninja Editado";
     }
 
-    @DeleteMapping("/deletar-{id}")
-    public String deletarNinjaPorID (long id) {
+    @DeleteMapping("/deletar/{id}")
+    public String deletarNinjaPorID (@PathVariable long id) {
         return "Ninja Deletado";
     }
 }
