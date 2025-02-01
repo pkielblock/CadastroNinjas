@@ -20,7 +20,7 @@ import java.util.UUID;
 public class MissoesModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nome;
     private String dificuldade;
