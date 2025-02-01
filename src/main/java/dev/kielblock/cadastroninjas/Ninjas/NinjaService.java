@@ -22,7 +22,11 @@ public class NinjaService {
         return ninjaModel.orElse(null);
     }
 
-    public NinjaModel criarNInja(NinjaModel ninja) {
+    public NinjaModel criarNinja(NinjaModel ninja) {
         return ninjaRepository.save(ninja);
+    }
+
+    public void deletarNinja(long id) {
+        ninjaRepository.deleteById(id);
     }
 }
