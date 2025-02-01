@@ -1,15 +1,33 @@
 package dev.kielblock.cadastroninjas.Ninjas;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
 public class NinjaController {
 
-    @GetMapping("/boas-vindas")
-    public String boasVindas() {
-        return "Primeira Rota";
+    @PostMapping("/criar")
+    public String criarNinja() {
+        return "Ninja Criado";
+    }
+
+    @GetMapping("/todos")
+    public String mostrarTodosNinjas() {
+        return "Mostrar todos Ninjas";
+    }
+
+    @GetMapping("/ninja-{id}")
+    public String mostrarNinjaPorID(long id) {
+        return "Mostrar Ninja ID";
+    }
+
+    @PutMapping("/editar-{id}")
+    public String alterarNinjaPorID(long id) {
+        return "Ninja Editado";
+    }
+
+    @DeleteMapping("/deletar-{id}")
+    public String deletarNinjaPorID (long id) {
+        return "Ninja Deletado";
     }
 }
