@@ -4,8 +4,6 @@ import dev.kielblock.cadastroninjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.UUID;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -30,4 +28,6 @@ public class NinjaModel {
     @ManyToOne
     @JoinColumn(name = "missoes_id")
     private MissoesModel missoes;
+
+    private String rank;
 }
