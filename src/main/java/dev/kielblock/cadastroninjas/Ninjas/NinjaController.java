@@ -46,7 +46,7 @@ public class NinjaController {
         if (ninjaDTO != null) {
             return ResponseEntity.ok(ninjaService.editarNinja(id, ninja));
         } else {
-            return  ResponseEntity.status(HttpStatus.NOT_FOUND)
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Ninja com o ID: " + id + " não encontrado.");
         }
     }
